@@ -1,0 +1,20 @@
+// Write this code in the cpp.json file 
+{ 
+	"cpp snippets": 
+	{ 
+		"prefix" : "cpp", 
+				"body" : [ 
+					"#include<iostream>", 
+					"using namespace std;", 
+
+
+					"int main()", "{", 
+
+					
+					" return 0;", 
+					"}"
+
+				], 
+							"description" : "to produce the main snippet for cpp"
+	} 
+} 
