@@ -1,47 +1,62 @@
-// #include <iostream>
-// #include <vector>
+#include <iostream>
+#include <cstring>
+#include <vector>
+using namespace std;
+// // Function to reverse a string in place
+// void reverseString(char* str, int length) {
+//     int start = 0;
+//     int end = length - 1;
+//     while (start < end) {
+//         char temp = str[start];
+//         str[start] = str[end];
+//         str[end] = temp;
+//         start++;
+//         end--;
+//     }
+// }
 
-// using namespace std;
+// // Function to split a string into words and reverse each word
+// void reverseWords(char* input) {
+//     int length = strlen(input);
+//     int wordStart = -1;
+
+//     for (int i = 0; i <= length; ++i) {
+//         if (input[i] == ' ' || input[i] == '\0') {
+//             if (wordStart != -1) {
+//                 reverseString(input + wordStart, i - wordStart);
+//                 wordStart = -1;
+//             }
+//         } else {
+//             if (wordStart == -1) {
+//                 wordStart = i;
+//             }
+//         }
+//     }
+// }
 
 // int main() {
-//     vector<int> v; // Define the vector
-//     // Add elements to the vector
-//     v.push_back(10);
-//     v.push_back(20);
-//     v.push_back(30);
-
-//     // Loop to shift elements
-//     for (int i = 2; i >= 1; i--) {
-//         v[i] = v[i - 1];
-//     }
-
-//     // Loop to print the first two elements
-//     for (int i = 0; i < 3; i++) {
-//         cout << v[i] << " ";
-//     }
+//     char input[] = "Love Babbar";
+    
+//     std::cout << "Input: " << input << std::endl;
+    
+//     reverseString(input,strlen(input));
+    
+//     std::cout << "Output: " << input << std::endl;
 
 //     return 0;
 // }
-#include<iostream>
-using namespace std;
 
-int main(){
-    int n=3, sum=0;
-    // cin >> n;
-    int input[n];
-    // for(int i=0;i<n;i++){
-    //     cin >> input[0];
-    // }
-     for(int i=0; i<n; i++){
-        //  sum = sum + input[i];
-        // cout << "Input is "<<input[i] <<" " << endl;
-        cin >> input[i];
-     }
-    // cout << sum << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout << input[i] << " ";
-    }
-    
+int main() {
+   
+   int n;
+   cin >> n;
+   vector<bool>prime(n,true);
+
+   for (int  i = 0; i < n; i++)
+   {
+    cout << i << ": " << prime[i] <<endl; 
+   }
+   
     return 0;
 }
+

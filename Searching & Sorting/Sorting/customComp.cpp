@@ -25,8 +25,8 @@ bool comp(int &a,int &b){ //here only 1d arr that's why only use its element a a
 }
 
 bool sortMyWayComp(vector<int>&a,vector<int>&b){
-    // return a[0] < b[0]; basis on 0th elemetn increasing sorting 
-    return a[1] < b[1];// basis on 1st elemetn increasing sorting 
+    return a[0] < b[0]; //basis on 0th elemetn increasing sorting 
+    // return a[1] < b[1];// basis on 1st elemetn increasing sorting 
 
 }
 
