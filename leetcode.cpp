@@ -48,15 +48,25 @@ using namespace std;
 
 int main() {
    
-   int n;
-   cin >> n;
-   vector<bool>prime(n,true);
+//    int n;
+//    cin >> n;
+//    vector<bool>prime(n,true);
 
-   for (int  i = 0; i < n; i++)
-   {
-    cout << i << ": " << prime[i] <<endl; 
-   }
-   
+//    for (int  i = 0; i < n; i++)
+//    {
+//     cout << i << ": " << prime[i] <<endl; 
+//    }
+//    int arr[5] = {1,2,3,4,5};
+//    int* p = &arr[1];
+//    cout << p;
+// //    cout << arr[0];
+
+
+
+    char ch[] = "ABCD";
+    // char* p = ch;
+    // cout << "s[0] : " << ch[0] << " p[0] : " << p[0];
+    cout << *(ch);
     return 0;
 }
 
