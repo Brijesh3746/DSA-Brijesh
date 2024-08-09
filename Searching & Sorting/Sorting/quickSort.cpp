@@ -6,18 +6,18 @@ void quickSort(int arr[],int s,int e){
     if(s >= e) return;
 
     int pivotIndex = e;
-    int i = s - 1;
+    int i = s ;//- 1;
     int j = s;
 
     while(j < pivotIndex){
         if(arr[j] < arr[pivotIndex]){
-            i++;
             swap(arr[i], arr[j]);
+            i++;
         }
         j++;
     }
 
-    i++;
+    // i++; -> lakshya bhai case
     swap(arr[i], arr[j]);
 
     // recursion call 
@@ -31,15 +31,24 @@ void quickSort(int arr[],int s,int e){
 
 int main()
 {
-    int arr[] = {7,5,5,5,5,2,2,2,2,10,4};
-    int n = 11;
+    int arr[] = {5,7,1,7,7,4,4,4,5,6,5,4};
+    int n = 12;
 
     int s = 0;
     int e = n-1;
-    quickSort(arr,s,e);
 
+    cout << "Before : "; 
     for(int i:arr){
         cout<<i<<" ";
     }
+    cout << endl;
+
+    quickSort(arr,s,e);
+
+    cout << "After  : "; 
+    for(int i:arr){
+        cout<<i<<" ";
+    }
+    cout << endl;
  return 0;
 }

@@ -91,7 +91,7 @@ void mergeSort(int arr[],int s,int e){
 int main()
 {
 
-    int arr[] = {100,150,45,40,50};
+    int arr[] = {1,30,45,10,2};
     int n = 5;
     int s = 0;
     int e = n-1;
