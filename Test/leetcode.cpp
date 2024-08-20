@@ -63,10 +63,19 @@ int main() {
 
 
 
-    char ch[] = "ABCD";
+    // char ch[] = "ABCD";
+    int *ch = new int[5];
+    // cout << *(ch)<< endl;
     // char* p = ch;
     // cout << "s[0] : " << ch[0] << " p[0] : " << p[0];
-    cout << *(ch);
+    for (int i = 0; i < 5; i++)
+    {
+        ch[i] =  i+1;
+    }
+    
+    delete[] ch;
+    ch = nullptr;
+    // cout << ch[3];  
     return 0;
 }
 
