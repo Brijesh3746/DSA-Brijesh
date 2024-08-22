@@ -39,7 +39,7 @@ class B{
         }
 };
 
-class C:public A, public B{
+class C: public A, public B{
     public:
         int maths;
         C(){
@@ -60,6 +60,8 @@ class C:public A, public B{
 int main()
 {
     C object1;
+
+    // how to solve dimond problem -> using scope resoultion operator
     cout << object1.A::physics << endl;
     cout << object1.B::physics << endl;
     cout << object1.maths << endl;

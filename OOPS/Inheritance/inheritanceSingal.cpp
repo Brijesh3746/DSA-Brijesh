@@ -28,9 +28,7 @@ class Car{
         int weight;
         string name;
 
-        void speeding(){
-            cout << "This is My Speed " << endl;
-        }
+       
 
         void testing(){
             cout << "This is testing" << endl;
@@ -38,14 +36,18 @@ class Car{
 };
 
 class Porsche:public Car{
-
+    public:
+    void run(){
+        cout << "Calling" ; 
+    }
 };
 
 
 int main()
 {
     Porsche b1;
-    b1.speeding();
+    b1.testing();
+    b1.run();
 
 
     return 0;
