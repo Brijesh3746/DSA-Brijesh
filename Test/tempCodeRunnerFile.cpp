@@ -1,4 +1,3 @@
-n; i++)
-    {
-        ans.push_back(name[i].length());
-    }
+Student(){
+            cout << " hello i";
+        }

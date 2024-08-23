@@ -1,40 +1,47 @@
+// #include <iostream>
+// using namespace std;
+
+// class Base {
+// public:
+//     virtual void method() {  // Not virtual
+//         cout << "Base method" << endl;
+//     }
+// };
+
+// class Derived : public Base {
+// public:
+//     void method()  {  // This will cause a compile-time error
+//         cout << "Derived method" << endl;
+//     }
+// };
+
+// int main() {
+//     Base* d = new Derived();
+//     d->method();  // Calls Derived::method
+
+//     return 0;
+// }
+
 #include<iostream>
-#include<vector>
-#include<limits.h>
 using namespace std;
+
+class Student{
+    int marks;
+
+    public:     
+        Student(int x){
+            marks = x;
+        }
+        Student(){
+            cout << " hello i";
+        }
+};
+
 int main()
 {
-    string str[] = {"rajesh","Patel","Papa"};
-    int n =3;
-    cout << n;
-    int ma = INT_MIN;
-    int sm,tm,index;
-    vector<int>ans;
-    for (int i = 0; i < n; i++)
-    {
-        ans.push_back(str[i].size());
-    }
-
-    for (int i = 0; i < ans.size(); i++)
-    {
-        if(ma < ans[i]){
-            tm = sm;
-            sm = ma;
-            ma = ans[i];
-        }
-        else if(ma <= ans[i] && ans[i] >= sm){
-            tm = sm;
-            sm = ans[i];
-            index = i;
-        }
-        else if(ans[i] <= sm && ans[i] >= tm){
-            tm = ans[i];
-            index = i;
-        }
-        
-    }
-    
-    cout << str[index] << endl;
-    
-    return 0;
+    // Student s1(100);
+    // Student s2();
+    // Student s3 = 100;
+    Student s;
+ return 0;
 }
