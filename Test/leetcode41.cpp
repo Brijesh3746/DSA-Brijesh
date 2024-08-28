@@ -5,22 +5,9 @@ using namespace std;
 
 int main() {
     // Write C++ code here
-    vector<int> arr = { 1,2,0 };
-    int n = 3;
-
-    int i = 0;
-    int j = i + 1;
-    while (j < n) {
-        if (arr[i] > arr[j]) {
-            swap(arr[i], arr[j]);
-            i = 0;
-        }
-        
-            i++;
-            j++;
-        
-    }
-    for (auto i : arr)
-        cout << i << " ";
-    return 0;
+    string s = "hello";
+    // cout << s + '0' ;
+    int i=2;int lenght = 3;
+    cout << s.substr(i/2,lenght);
+       return 0;
 }
