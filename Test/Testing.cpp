@@ -121,57 +121,57 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <climits>
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <climits>
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    vector<string> name = { "coder", "byter", "587fd"};//, "hgdrg" };
-    int n = name.size();
+// int main() {
+//     vector<string> name = { "coder", "byter", "587fd"};//, "hgdrg" };
+//     int n = name.size();
 
-    // Vector to store lengths of the strings
-    vector<int> lengths;
-    for (const auto& str : name) {
-        lengths.push_back(str.length());
-    }
+//     // Vector to store lengths of the strings
+//     vector<int> lengths;
+//     for (const auto& str : name) {
+//         lengths.push_back(str.length());
+//     }
 
-    // Variables to store maximum, second maximum, and third maximum lengths
-    int ma = INT_MIN, sm = INT_MIN, tm = INT_MIN;
+//     // Variables to store maximum, second maximum, and third maximum lengths
+//     int ma = INT_MIN, sm = INT_MIN, tm = INT_MIN;
 
-    // Find the first, second, and third maximum lengths
-    for (int length : lengths) {
-        if (length > ma) {
-            tm = sm;
-            sm = ma;
-            ma = length;
-        }
-        else if (length > sm && length < ma) {
-            tm = sm;
-            sm = length;
-        }
-        else if (length > tm && length < sm) {
-            tm = length;
-        }
-    }
+//     // Find the first, second, and third maximum lengths
+//     for (int length : lengths) {
+//         if (length > ma) {
+//             tm = sm;
+//             sm = ma;
+//             ma = length;
+//         }
+//         else if (length > sm && length < ma) {
+//             tm = sm;
+//             sm = length;
+//         }
+//         else if (length > tm && length < sm) {
+//             tm = length;
+//         }
+//     }
 
-    // Find the last occurrence of the third maximum length
-    int last_index = -1;
-    for (int i = 0; i < n; ++i) {
-        if (name[i].length() == tm) {
-            last_index = i;
-        }
-    }
+//     // Find the last occurrence of the third maximum length
+//     int last_index = -1;
+//     for (int i = 0; i < n; ++i) {
+//         if (name[i].length() == tm) {
+//             last_index = i;
+//         }
+//     }
 
-    // Output the result
-    if (last_index != -1) {
-        cout << "Third maximum length string: " << name[last_index] << endl;
-    }
-    else {
-        cout << "Less than three unique lengths." << endl;
-    }
+//     // Output the result
+//     if (last_index != -1) {
+//         cout << "Third maximum length string: " << name[last_index] << endl;
+//     }
+//     else {
+//         cout << "Less than three unique lengths." << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
