@@ -115,6 +115,41 @@ void insertAtAny(Node*& head, Node*& tail, int pos, int data) {
         temp->next = newNode;
 
     }
+}
+
+void deleteNode(Node* &head,Node* &tail,int position){
+    int length = getLength(head);
+
+    // LL is empty
+    if(head == NULL){
+        cout << "LL is empty So Can't Delete" << endl;
+        return;
+    }
+
+    // Delete the first Node
+    if(position == 1){
+        Node* temp = head;
+        head = temp->next;
+        temp = NULL;
+        delete temp;
+    }
+    else if(position == length){
+        // last me node delete krdo
+        Node* temp = head;
+
+        while(temp->next != tail){
+            temp = temp->next;
+        }
+
+       temp->next = NULL;
+       delete tail;
+       tail = temp;
+    }
+    else{
+        // node ko mid se delete kro
+
+    }
+
 
 
 }
@@ -147,18 +182,23 @@ int main()
     Node* head = NULL;
     Node* tail = NULL;
 
-    // insertAtEnd(head, tail, 10);
-    // insertAtEnd(head, tail, 20);
-    // insertAtEnd(head, tail, 30);
-    // insertAtEnd(head, tail, 50);
-
-    // printLL(head);
-
     insertAtEnd(head, tail, 10);
     insertAtEnd(head, tail, 20);
     insertAtEnd(head, tail, 30);
-    insertAtAny(head,tail,3,25);
+    insertAtEnd(head, tail, 40);
+
     printLL(head);
+    deleteNode(head,tail,4);
+
+    printLL(head);
+
+    // insertAtEnd(head, tail, 10);
+    // insertAtEnd(head, tail, 20);
+    // insertAtEnd(head, tail, 30);
+    // insertAtAny(head,tail,3,25);
+    // printLL(head);
+
+
 
 
 

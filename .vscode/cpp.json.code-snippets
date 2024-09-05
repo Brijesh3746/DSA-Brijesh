@@ -5,6 +5,7 @@
 		"prefix" : "cpp", 
 				"body" : [ 
 					"#include<iostream>", 
+					"#include<vector>",
 					"using namespace std;", 
 
 

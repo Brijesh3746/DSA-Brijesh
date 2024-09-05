@@ -175,3 +175,30 @@
 
 //     return 0;
 // }
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void bubbleSort(vector<int>& a) {
+    for (int i = 0;i < a.size() - 1;i++) {
+        for (int j = i;j < a.size();j++) {
+            if ((j+1)<a.size() && a[j] > a[j + 1]) {
+                swap(a[j + 1], a[j]);
+            }
+        }
+    }
+}
+
+
+int main()
+{
+    vector<int>a = {2,1,10,18,17,6};
+    bubbleSort(a);
+    for(auto i:a){
+        cout<<i<<" ";
+    }
+
+ return 0;
+}
