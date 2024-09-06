@@ -211,9 +211,9 @@ int main()
     Node* tail = NULL;
 
     insertAtEnd(head, tail, 10);
-    // insertAtEnd(head, tail, 20);
-    // insertAtEnd(head, tail, 30);
-    // insertAtEnd(head, tail, 40);
+    insertAtEnd(head, tail, 20);
+    insertAtEnd(head, tail, 30);
+    insertAtEnd(head, tail, 40);
 
     printLL(head);
 
