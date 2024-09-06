@@ -165,22 +165,22 @@ void deleteNode(Node* &head,Node* &tail,int position){
        tail = temp;
     }
     else{
-        // //node ko mid se delete kro
-    //     Node* prev = NULL;
-    //     Node* curr = head;
+        //node ko mid se delete kro
+        Node* prev = NULL;
+        Node* curr = head;
 
-    //     while(position != 1){
-    //         position--;
-    //         prev = curr;
-    //         curr = curr->next;
-    //     }
-    //     prev->next = curr->next;
-    //     curr->next = NULL;
-    //     delete curr;
-    // }
+        while(position != 1){
+            position--;
+            prev = curr;
+            curr = curr->next;
+        }
+        prev->next = curr->next;
+        curr->next = NULL;
+        delete curr;
+    }
 
     }
-}
+
 
 
 int main()
@@ -221,7 +221,7 @@ int main()
 
     deleteNode(head, tail, 2);
 
-    // printLL(head);
+    printLL(head);
 
     // insertAtEnd(head, tail, 10);
     // insertAtEnd(head, tail, 20);
