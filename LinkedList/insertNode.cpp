@@ -97,7 +97,18 @@ void insertAtAny(Node*& head, Node*& tail, int pos, int data) {
         return;
     }
     else {
-        // int i = 1;
+        // with two node
+        // Node* prev = NULL;
+        // Node* curr = head;
+
+        // while (position != 1) {
+        //     position--;
+        //     prev = curr;
+        //     curr = curr->next;
+        // }
+
+
+        // with one node
         Node* temp = head;
         Node* newNode = new Node(data);
 
@@ -105,7 +116,7 @@ void insertAtAny(Node*& head, Node*& tail, int pos, int data) {
         while (pos != 2) {
             pos--;
             temp = temp->next;
-            // i++;
+
         }
 
         // newNode ke next ko link karunga
@@ -146,12 +157,21 @@ void deleteNode(Node* &head,Node* &tail,int position){
        tail = temp;
     }
     else{
-        // node ko mid se delete kro
+        // //node ko mid se delete kro
+    //     Node* prev = NULL;
+    //     Node* curr = head;
+
+    //     while(position != 1){
+    //         position--;
+    //         prev = curr;
+    //         curr = curr->next;
+    //     }
+    //     prev->next = curr->next;
+    //     curr->next = NULL;
+    //     delete curr;
+    // }
 
     }
-
-
-
 }
 
 
@@ -188,7 +208,7 @@ int main()
     insertAtEnd(head, tail, 40);
 
     printLL(head);
-    deleteNode(head,tail,4);
+    deleteNode(head,tail,2);
 
     printLL(head);
 
