@@ -137,6 +137,14 @@ void deleteNode(Node* &head,Node* &tail,int position){
         return;
     }
 
+    // only one element in LL
+    if(head == tail){
+        Node* temp = head;
+        delete temp;
+        head = NULL;
+        tail = NULL;
+    }
+
     // Delete the first Node
     if(position == 1){
         Node* temp = head;
@@ -203,14 +211,17 @@ int main()
     Node* tail = NULL;
 
     insertAtEnd(head, tail, 10);
-    insertAtEnd(head, tail, 20);
-    insertAtEnd(head, tail, 30);
-    insertAtEnd(head, tail, 40);
+    // insertAtEnd(head, tail, 20);
+    // insertAtEnd(head, tail, 30);
+    // insertAtEnd(head, tail, 40);
 
     printLL(head);
-    deleteNode(head,tail,2);
 
-    printLL(head);
+  
+
+    deleteNode(head, tail, 2);
+
+    // printLL(head);
 
     // insertAtEnd(head, tail, 10);
     // insertAtEnd(head, tail, 20);
